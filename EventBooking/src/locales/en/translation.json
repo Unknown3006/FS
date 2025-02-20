@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "Home",
+    "events": "Events",
+    "profile": "My Profile",
+    "bookings": "My Bookings",
+    "logout": "Logout"
+  },
+  "home": {
+    "welcome": "Welcome to EventBooker",
+    "subtitle": "Discover and book amazing events in your city",
+    "browseEvents": "Browse Events"
+  },
+  "events": {
+    "search": "Search events by name or location",
+    "categories": "Categories",
+    "allEvents": "All Events",
+    "noEvents": "No events found",
+    "book": "Book Now",
+    "date": "Date",
+    "location": "Location",
+    "price": "Price"
+  },
+  "auth": {
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?"
+  }
+} 

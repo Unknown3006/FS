@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './context/AuthContext';
+import './i18n';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Events from './pages/Events';
@@ -6,7 +8,6 @@ import BookingPage from './pages/BookingPage';
 import Profile from './pages/Profile';
 import EventDetails from './pages/EventDetails';
 import './App.css';
-import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (

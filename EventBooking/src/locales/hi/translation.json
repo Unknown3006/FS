@@ -1,0 +1,35 @@
+{
+  "nav": {
+    "home": "होम",
+    "events": "इवेंट्स",
+    "profile": "मेरी प्रोफाइल",
+    "bookings": "मेरी बुकिंग",
+    "logout": "लॉग आउट"
+  },
+  "home": {
+    "welcome": "EventBooker में आपका स्वागत है",
+    "subtitle": "अपने शहर में शानदार इवेंट्स खोजें और बुक करें",
+    "browseEvents": "इवेंट्स देखें"
+  },
+  "events": {
+    "search": "नाम या स्थान से इवेंट खोजें",
+    "categories": "श्रेणियां",
+    "allEvents": "सभी इवेंट्स",
+    "noEvents": "कोई इवेंट नहीं मिला",
+    "book": "बुक करें",
+    "date": "तारीख",
+    "location": "स्थान",
+    "price": "कीमत"
+  },
+  "auth": {
+    "signUp": "साइन अप",
+    "signIn": "साइन इन",
+    "name": "नाम",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "createAccount": "अकाउंट बनाएं",
+    "alreadyHaveAccount": "पहले से अकाउंट है?",
+    "dontHaveAccount": "अकाउंट नहीं है?"
+  }
+} 

@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <nav className="bg-white shadow-lg">
@@ -16,11 +19,13 @@ function Navbar() {
           
           <div className="flex items-center space-x-4">
             <Link to="/" className="text-gray-600 hover:text-gray-900">
-              Home
+              {t('nav.home')}
             </Link>
             <Link to="/events" className="text-gray-600 hover:text-gray-900">
-              Events
+              {t('nav.events')}
             </Link>
+            
+            <LanguageSwitcher />
             
             <div className="relative">
               <button
@@ -37,23 +42,22 @@ function Navbar() {
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    My Profile
+                    {t('nav.profile')}
                   </Link>
                   <Link
                     to="/profile/bookings"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => setIsDropdownOpen(false)}
                   >
-                    My Bookings
+                    {t('nav.bookings')}
                   </Link>
                   <button
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     onClick={() => {
                       setIsDropdownOpen(false);
-                      // Add logout logic here
                     }}
                   >
-                    Logout
+                    {t('nav.logout')}
                   </button>
                 </div>
               )}

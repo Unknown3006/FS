@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { events } from '../mockData';
+import ReviewSection from '../components/ReviewSection';
+import WishlistButton from '../components/WishlistButton';
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -79,7 +81,11 @@ const EventDetails = () => {
             />
           </div>
           <div className="p-6 md:w-1/2">
-            <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
+            <div className="flex justify-between items-start">
+              <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
+              <WishlistButton eventId={event.id} />
+            </div>
+            
             <div className="space-y-4">
               <div>
                 <h2 className="text-xl font-semibold mb-2">Event Details</h2>
@@ -158,6 +164,8 @@ const EventDetails = () => {
           </div>
         </div>
       </div>
+
+      <ReviewSection eventId={id} />
     </div>
   );
 };
