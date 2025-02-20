@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 const Confirmation = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-8 text-center">
@@ -8,7 +12,7 @@ const Confirmation = () => {
           Thank you for your booking. We have sent a confirmation email with all the details.
         </p>
         <button
-          onClick={() => window.location.href = '/'}
+          onClick={() => navigate('/')}
           className="bg-primary text-white px-6 py-2 rounded hover:bg-secondary transition-colors"
         >
           Back to Home

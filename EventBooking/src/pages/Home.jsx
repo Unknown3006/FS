@@ -1,39 +1,27 @@
-import { useState, useEffect } from 'react';
-import EventCard from '../components/EventCard';
-import { events } from '../mockData'; // Import the mock data
+import { Link } from 'react-router-dom';
+import AuthForms from '../components/AuthForms';
 
-const Home = () => {
-  const [eventsList, setEventsList] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-
-  useEffect(() => {
-    // Set the mock data
-    setEventsList(events);
-  }, []);
-
-  const filteredEvents = eventsList.filter(event => 
-    event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    event.location.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-8">
-        <input
-          type="text"
-          placeholder="Search events by name or location..."
-          className="w-full p-4 border rounded-lg"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Welcome to EventBooker
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Discover and book amazing events in your city
+        </p>
+        <Link
+          to="/events"
+          className="bg-blue-500 text-white px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Browse Events
+        </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredEvents.map(event => (
-          <EventCard key={event.id} event={event} />
-        ))}
-      </div>
+      
+      <AuthForms />
     </div>
   );
-};
+}
 
 export default Home; 
