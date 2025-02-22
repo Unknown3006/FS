@@ -3,14 +3,14 @@ import React from 'react';
 function CategoryFilter({ categories, selectedCategory, onSelectCategory }) {
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold mb-4">Categories</h3>
+      <h3 className="text-lg font-semibold mb-4 text-cyan-400">Categories</h3>
       <div className="flex flex-wrap gap-2">
         <button
           onClick={() => onSelectCategory(null)}
-          className={`px-4 py-2 rounded-full ${
+          className={`px-4 py-2 rounded-xl transition-all duration-300 ${
             !selectedCategory 
-              ? 'bg-blue-500 text-white' 
-              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              ? 'bg-cyan-500 text-gray-900' 
+              : 'bg-gray-800 text-cyan-400 hover:bg-gray-700'
           }`}
         >
           All
@@ -19,10 +19,10 @@ function CategoryFilter({ categories, selectedCategory, onSelectCategory }) {
           <button
             key={category}
             onClick={() => onSelectCategory(category)}
-            className={`px-4 py-2 rounded-full ${
+            className={`px-4 py-2 rounded-xl transition-all duration-300 ${
               selectedCategory === category
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                ? 'bg-cyan-500 text-gray-900'
+                : 'bg-gray-800 text-cyan-400 hover:bg-gray-700'
             }`}
           >
             {category}
